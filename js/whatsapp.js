@@ -88,6 +88,7 @@ export function crearMensajeEncargo(datos) {
     const lana = normalizarTexto(datos.lana);
     const telar = normalizarTexto(datos.telar);
     const colores = normalizarTexto(datos.colores);
+    const tintesNaturales = normalizarTexto(datos.tintesNaturales);
     const detalles = normalizarTexto(datos.detalles);
     const descripcion = normalizarTexto(datos.descripcion);
 
@@ -99,6 +100,7 @@ export function crearMensajeEncargo(datos) {
         `Tipo de lana: ${lana}`,
         `Tipo de telar: ${telar}`,
         `Colores: ${colores}`,
+        `Tintes naturales: ${tintesNaturales}`,
         `Detalles: ${detalles}`
     ];
 
