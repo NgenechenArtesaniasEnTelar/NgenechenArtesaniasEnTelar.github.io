@@ -91,7 +91,8 @@
                             <option value="" disabled selected>Elegi una opcion</option>
                             <option value="Oveja">Oveja</option>
                             <option value="Llama">Llama</option>
-                            <option value="Industrial">Industrial</option>
+                            <option value="Melino">Melino</option>
+                            <option value="Hilada artesanalmente">Hilada artesanalmente</option>
                             <option value="Otras">Otras</option>
                         </select>
                     </label>
@@ -100,8 +101,9 @@
                         Tipo de telar
                         <select name="telar" required>
                             <option value="" disabled selected>Elegi una opcion</option>
+                            <option value="vertical">vertical</option>
+                            <option value="2 cuadros">2 cuadros</option>
                             <option value="4 cuadros">4 cuadros</option>
-                            <option value="6 cuadros">6 cuadros</option>
                             <option value="8 cuadros">8 cuadros</option>
                             <option value="Otro">Otro</option>
                         </select>
@@ -110,6 +112,10 @@
                     <label>
                         Colores
                         <input type="text" name="colores" placeholder="Ej: bordo y beige" required>
+                        <div>
+                        <input type="checkbox" id="Tintes naturales" name="Tintes naturales" checked />
+                        <label for="Tintes naturales">Tintes naturales, estos colores pueden vense afectados por la tenporada y l zona en la que trabajamos (San Andres de Giles)</label>
+                        </div>
                     </label>
 
                     <fieldset class="radio-group">
@@ -126,7 +132,7 @@
 
                     <label>
                         Descripcion libre (opcional)
-                        <textarea name="descripcion" rows="4" placeholder="Contanos cualquier otro detalle: flecos, guarda, ocasion, etc."></textarea>
+                        <textarea name="descripcion" rows="4" placeholder="Contanos cualquier otro detalle: flecos, guarda, bordado tradicional, intervencion den cuero etc."></textarea>
                     </label>
 
                     <button class="button button-primary" type="submit">Enviar encargo</button>
