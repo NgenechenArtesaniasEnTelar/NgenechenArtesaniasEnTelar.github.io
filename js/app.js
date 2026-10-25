@@ -282,6 +282,7 @@ function inicializarContacto() {
             lana: data.get("lana"),
             telar: data.get("telar"),
             colores: data.get("colores"),
+            tintesNaturales: data.get("tintesNaturales"),
             detalles: data.get("detalles"),
             descripcion: data.get("descripcion")
         }));
