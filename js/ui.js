@@ -1,24 +1,6 @@
 import { CONFIG } from "./config.js";
 import { formatearMoneda, escaparHTML } from "./utilidades.js";
 
-function renderTiempoElaboracion(producto) {
-    if (!producto?.tiempoElaboracion) {
-        return "";
-    }
-
-    return `
-        <div class="product-time" aria-label="Tiempo de elaboración">
-            <span class="product-time__icon" aria-hidden="true">
-                <svg viewBox="0 0 24 24" role="img" aria-hidden="true" focusable="false">
-                    <path d="M7 2.75v2.5M17 2.75v2.5M4.5 8.5h15M6.5 5.25h11A2.5 2.5 0 0 1 20 7.75v9.5A2.5 2.5 0 0 1 17.5 19.75h-11A2.5 2.5 0 0 1 4 17.25v-9.5A2.5 2.5 0 0 1 6.5 5.25Z"/>
-                    <path d="M8.25 12.25h3.5M8.25 15.25h6.5"/>
-                </svg>
-            </span>
-            <span>Tiempo de elaboración: ${escaparHTML(producto.tiempoElaboracion)}</span>
-        </div>
-    `;
-}
-
 /**
  * Renders a loading state inside a container.
  * @param {Element} container
@@ -173,7 +155,6 @@ export function renderDetalleProducto(container, producto) {
                 <p class="eyebrow">${escaparHTML(producto.categoria)}</p>
                 <h1>${escaparHTML(producto.nombre)}</h1>
                 <p class="product-detail__description">${escaparHTML(producto.descripcion)}</p>
-                ${renderTiempoElaboracion(producto)}
                 <p class="price">${formatearMoneda(producto.precio, CONFIG.CURRENCY)}</p>
                 <p class="stock">${producto.stock > 0 ? `${producto.stock} unidades disponibles` : "Sin stock"}</p>
                 <div class="actions-row">
